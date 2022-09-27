@@ -1,3 +1,54 @@
+# seminar 2
+# Задача 1. Напишите программу, которая принимает на вход вещественное или целое 
+# число и показывает сумму его цифр. Через строку нельзя решать.
+# num=input('введите число ')
+# p=0
+# if num.isdigit():
+#     num=int(num)
+#     while num!=0:
+#         p=p+num%10
+#         num=num//10
+#     print(p)
+# else:
+#     x=num.split('.')
+#     a=int(x[0])
+#     b=int(x[1])
+#     while a!=0:
+#         p=p+a%10
+#         a=a//10
+#     while b!=0:
+#         p=p+b%10
+#         b=b//10
+#     print(p)
+# Задача 2. Напишите программу, которая принимает на вход число N 
+# и выдает набор произведений чисел от 1 до N.
+
+# num=int(input('Введите число '))
+# p=1
+# for i in range(1,num+1):
+#     p*=i
+#     print(f'{p}', end=' ')
+   
+# Задача 3. Реализуйте алгоритм перемешивания списка. Список размерностью 10 задается случайными целыми числами,
+#  выводится на экран,
+#  затем перемешивается, опять выводится на экран. SHUFFLE нельзя юзать!
+import random 
+N=10
+spisok=[]
+for i in range(N):
+    spisok.append(random.randint(1,100))
+print(spisok)
+
+def bubble(spisok):
+    for i in range(N-1):
+        for j in range(N-i-1):
+            if spisok[j] > spisok[j+1]:
+                buff = spisok[j]
+                spisok[j] = spisok[j+1]
+                spisok[j+1] = buff
+bubble(spisok)
+print(spisok)
+# Seminar1
 # задача 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели,
 #  и проверяет, является ли этот день выходным.
 
@@ -94,3 +145,5 @@
 #     print_array(ar)
 # except:
 #         print('Некорректный ввод')
+
+
