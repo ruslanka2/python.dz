@@ -1,5 +1,78 @@
-# seminar 2
-# Задача 1. Напишите программу, которая принимает на вход вещественное или целое 
+# Задача 1 Задайте список из нескольких чисел. Напишите программу,
+# которая найдёт сумму элементов списка, стоящих на нечётной позиции.
+
+
+# list1 = [2, 3, 5, 9, 3]
+
+# def nechet(list1):
+#     sum = 0
+#     for i in range(1, len(list1)):
+#         if i % 2 == 1:
+#             sum += list1[i]
+#     print(sum)
+
+# print(list1)
+# nechet(list1)
+# Задача 2. Напишите программу, которая найдёт произведение пар чисел списка.
+#  Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
+
+# Задача 2. Напишите программу, которая найдёт произведение пар чисел списка.
+#  Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+# list1=[2, 3, 4, 5, 6]
+# def pro(list1):
+#     counter1=-1
+#     prooz=1
+#     for i in range((len(list1)+1)//2):
+#         prooz=list1[i]*list1[counter1]
+#         counter1-=1
+#         print(prooz)
+# print(list1)
+# pro(list1)
+
+# задача 3
+
+# list1=[1.1, 1.2, 3.1, 5.5, 10.01]
+# drobn=[]
+# def drob(list1):
+#     m=0
+#     for i in range(len(list1)):
+#         m=round (float(list1[i])-int(list1[i]),2)
+#         drobn.append(m)
+#     print(drobn)
+# drob(list1)
+# def razn(drobn):
+#     maxi=drobn[0]
+#     mini=drobn[1]
+#     for i in range(len(drobn)):
+#         if drobn[i]>maxi:
+#             maxi=drobn[i]
+#         if drobn[i]<mini:
+#             mini=drobn[i]
+#     print(maxi-mini)
+# razn(drobn)
+
+# Задача 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+try:
+      n=int(input('Введите число '))
+except:
+      print('Ввести нужно именно целое число')
+def binar(n):
+    b = ''
+    while n > 0:
+        b = str(n % 2) + b
+        n = n // 2
+    print(b)
+binar(n)
+
+
+
+        
+        
+
+#  seminar 2
+# Задача 1. Напишите программу, которая принимает на вход вещественное или целое
 # число и показывает сумму его цифр. Через строку нельзя решать.
 # num=input('введите число ')
 # p=0
@@ -20,7 +93,7 @@
 #         p=p+b%10
 #         b=b//10
 #     print(p)
-# Задача 2. Напишите программу, которая принимает на вход число N 
+# Задача 2. Напишите программу, которая принимает на вход число N
 # и выдает набор произведений чисел от 1 до N.
 
 # num=int(input('Введите число '))
@@ -28,26 +101,26 @@
 # for i in range(1,num+1):
 #     p*=i
 #     print(f'{p}', end=' ')
-   
+
 # Задача 3. Реализуйте алгоритм перемешивания списка. Список размерностью 10 задается случайными целыми числами,
 #  выводится на экран,
 #  затем перемешивается, опять выводится на экран. SHUFFLE нельзя юзать!
-import random 
-N=10
-spisok=[]
-for i in range(N):
-    spisok.append(random.randint(1,100))
-print(spisok)
+# import random
+# N=10
+# spisok=[]
+# for i in range(N):
+#     spisok.append(random.randint(1,100))
+# print(spisok)
 
-def bubble(spisok):
-    for i in range(N-1):
-        for j in range(N-i-1):
-            if spisok[j] > spisok[j+1]:
-                buff = spisok[j]
-                spisok[j] = spisok[j+1]
-                spisok[j+1] = buff
-bubble(spisok)
-print(spisok)
+# def bubble(spisok):
+#     for i in range(N-1):
+#         for j in range(N-i-1):
+#             if spisok[j] > spisok[j+1]:
+#                 buff = spisok[j]
+#                 spisok[j] = spisok[j+1]
+#                 spisok[j+1] = buff
+# bubble(spisok)
+# print(spisok)
 # Seminar1
 # задача 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели,
 #  и проверяет, является ли этот день выходным.
@@ -114,9 +187,8 @@ print(spisok)
 #     print('Некорректный ввод')
 # Задача 5 VERY HARD SORT необязательная
 
-# Задайте двумерный массив из целых чисел. Количество строк и столбцов задается с клавиатуры. 
+# Задайте двумерный массив из целых чисел. Количество строк и столбцов задается с клавиатуры.
 # Отсортировать элементы по возрастанию слева направо и сверху вниз.
-
 
 
 # try:
@@ -133,8 +205,8 @@ print(spisok)
 #                 second_arr.append(random.randint(1,10))
 #             array_2d.append(second_arr)
 #         return array_2d
-    
-    
+
+
 #     def print_array(array_2d,m,n):
 #         for i in range(m):
 #             for j in range(n):
@@ -145,5 +217,3 @@ print(spisok)
 #     print_array(ar)
 # except:
 #         print('Некорректный ввод')
-
-
