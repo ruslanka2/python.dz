@@ -1,3 +1,129 @@
+# Семинар 5
+# задача 1. Создайте программу для игры с конфетами человек против человека.
+
+# Условие задачи: На столе лежит 2021 конфета. Играют два игрока делая ход друг после друга. 
+# Первый ход определяется жеребьёвкой.
+#  За один ход можно забрать не более чем 28 конфет. 
+#  Все конфеты оппонента достаются сделавшему последний ход.
+#   Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
+
+# a) Добавьте игру против бота
+
+# b) Подумайте как наделить бота ""интеллектом""
+# import random
+# def chel_vs_chel():
+#     total=2021
+#     max_candy=28
+#     count=1
+#     plaer1=input('Игрок номер 1 представьтесь ')
+#     plaer2=input('Игрок номер 2 представьтесь ')
+#     x=random.randint(0,1)
+#     if x==1:
+#         first=plaer1
+#         two=plaer2
+#     else:
+#         first=plaer2
+#         two=plaer1
+#     print(f'Итак, по результатам честной жеребьевки первым игру начинает {first}')
+
+#     while total>0:
+#         if count==1:
+#             step=int(input(f'{first} Делайте вашу ставку '))
+#             while step>max_candy:
+#                 step=int(input(f'Максимум можно только {max_candy} , еще попытка '))
+#             total-=step
+#         if total>0:
+#             print(f'Осталось {total} конфет')
+#             count=0
+#         else:
+#             print('Конфеты кончились')
+#         print('Переход хода к сопернику')
+#         if count ==0:
+#             step=int(input(f'{two} Делайте вашу ставку '))
+#             while step>max_candy:
+#                 step=int(input(f'Максимум можно только {max_candy} , еще попытка '))
+#             total-=step
+#         if total>0:
+#             print(f'Осталось {total} конфет')
+#             count=1
+#             print('Переход хода к сопернику')
+#         else:
+#             print('А нет!Конфетки ВСЁ')
+#     if count==1:
+#         print(f'Победил {first} поздравляем')
+#     if count==0:
+#         print(f'Победил {two} поздравляем')
+# chel_vs_chel()
+
+# with open('zip.txt', 'w', encoding='UTF-8') as file:
+#     file.write(input('Напишите текст необходимый для сжатия: '))
+# with open('zip.txt', 'r') as file:
+#     my_text = file.readline()
+#     text_compression = my_text.split()
+# print(my_text)
+# def rle_encode(text):
+#     enconding = ''
+#     prev_char = ''
+#     count = 1
+#     if not text:
+#         return ''
+
+#     for char in text:
+#         if char != prev_char:
+#             if prev_char:
+#                 enconding += str(count) + prev_char
+#             count = 1
+#             prev_char = char
+#         else:
+#             count += 1
+#     else:
+#         enconding += str(count) + prev_char
+#         return enconding
+# text_compression = rle_encode(my_text)
+
+# with open('text_compression_RLE_024.txt', 'w', encoding='UTF-8') as file:
+#     file.write(f'{text_compression}')
+# print(text_compression)
+
+# задача 2. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+
+# Входные и выходные данные хранятся в отдельных текстовых файлах
+# with open('zip.txt', 'w', encoding='UTF-8') as file:
+#     file.write(input('Напишите текст необходимый для сжатия: '))
+# with open('zip.txt', 'r') as file:
+#     my_text = file.readline()
+#     text_compression = my_text.split()
+# print(my_text)
+# def rle_encode(text):
+#     enconding = ''
+#     prev_char = ''
+#     count = 1
+#     if not text:
+#         return ''
+
+#     for char in text:
+#         if char != prev_char:
+#             if prev_char:
+#                 enconding += str(count) + prev_char
+#             count = 1
+#             prev_char = char
+#         else:
+#             count += 1
+#     else:
+#         enconding += str(count) + prev_char
+#         return enconding
+# text_compression = rle_encode(my_text)
+
+# with open('text_compression_RLE_024.txt', 'w', encoding='UTF-8') as file:
+#     file.write(f'{text_compression}')
+# print(text_compression)
+# задача 3. Напишите программу, удаляющую из текста все слова, содержащие "абв".
+# my_text = 'Напишите абв напиабв програбвмму программу, удаляющую из \
+#     этого абв текста все вабвс слова, содерабващие содержащие "абв"'
+
+# def delit(my_text):
+#     my_text = list(filter(lambda x: 'абв' not in x, my_text.split()))
+#     print(my_text)
 # Семинар 4
 # задача 1. Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
 
