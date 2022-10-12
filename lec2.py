@@ -1,9 +1,90 @@
+# Семинар 6
+# import random
+# list1 = [i for i in range(1, 10)]
+
+
+# def tabl(list1):
+#     for i in range(3):
+#         print(' ___________')
+#         print('|', list1[0+i*3], '|', list1[1+i*3], '|', list1[2+i*3], '|')
+#         print(' ___________')
+
+
+# def take(player_char):
+#     valid = False
+#     while not valid:
+#         player_index = input(
+#             'Ваш ход, выберите ячейку ' + player_char + ' --> ')
+#         try:
+#             player_index = int(player_index)
+#         except:
+#             print('Что то не то нажали')
+#             continue
+#         if player_index >= 1 and player_index <= 9:
+#             if (str(list1[player_index-1]) not in 'XO'):
+#                 list1[player_index-1] = player_char
+#                 valid = True
+#             else:
+#                 print('Там уже занято')
+#         else:
+#             print('Найдите другое место')
+
+
+# def check_win(list1):
+#     win_coord = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6),
+#                  (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+#     for each in win_coord:
+#         if list1[each[0]] == list1[each[1]] == list1[each[2]]:
+#             return list1[each[0]]
+#     return False
+
+
+# def main(list1):
+#     counter = 0
+#     win = False
+#     while not win:
+#         tabl(list1)
+#         if counter % 2 == 0:
+#             take("X")
+#         else:
+#             take("O")
+#         counter += 1
+#         if counter > 4:
+#             tmp = check_win(list1)
+#             if tmp:
+#                 print(tmp, "Победил!")
+#                 win = True
+#                 break
+#         if counter == 9:
+#             print("Ничья!")
+#             break
+
+
+# main(list1)
+
+# tabl(list1)
+import re
+znak=input('Введите значение ')
+rez=re.split("+", znak)
+print(rez)
+# if '-' in znak:
+#     x=znak.split('-'or'+')
+#     a=int(x[0])
+#     b=int(x[1])
+#     print(f'{znak}=>{a-b}')
+# if '+' in znak:
+#     x=znak.split('+')
+#     a=int(x[0])
+#     b=int(x[1])
+#     print(f'{znak}=>{a+b}')
+
+
 # Семинар 5
 # задача 1. Создайте программу для игры с конфетами человек против человека.
 
-# Условие задачи: На столе лежит 2021 конфета. Играют два игрока делая ход друг после друга. 
+# Условие задачи: На столе лежит 2021 конфета. Играют два игрока делая ход друг после друга.
 # Первый ход определяется жеребьёвкой.
-#  За один ход можно забрать не более чем 28 конфет. 
+#  За один ход можно забрать не более чем 28 конфет.
 #  Все конфеты оппонента достаются сделавшему последний ход.
 #   Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
 
@@ -148,16 +229,14 @@
 #  Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
 
-
-
 # list1=[1,1,2,3,222,2,3,123,12,1,2,1]
 
 # def unic(list1):
-#     list2=[]  
+#     list2=[]
 #     for i in range(len(list1)):
 #          if list1[i] not in list2:
 #             list2.append(list1[i])
-                
+
 #     print(list2)
 # unic(list1)
 # задача 4. Задайте два числа. Напишите программу, которая найдёт НОК (
@@ -169,7 +248,7 @@
 #         return a
 #     else:
 #         return nod(b,a%b)
- 
+
 # def nok(a,b):
 #     print (a*b//nod(a,b))
 # nok(a,b)
@@ -244,10 +323,6 @@
 #     print(b)
 # binar(n)
 
-
-
-        
-        
 
 #  seminar 2
 # Задача 1. Напишите программу, которая принимает на вход вещественное или целое
